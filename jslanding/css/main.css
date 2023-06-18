@@ -1,0 +1,862 @@
+html {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: conic-gradient(from 179.85deg at 50% 50%, #000000 0deg, #000000 204.39deg, #3D0000 360deg);
+}
+
+h1 {
+  font-family: "Six Caps", sans-serif;
+  color: #ffffff;
+  z-index: 20;
+}
+
+h2 {
+  color: #ffffff;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  font-family: "Six Caps";
+  justify-content: center;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 84px;
+  display: flex;
+  margin: 2rem;
+  letter-spacing: 0.06em;
+}
+
+h3 {
+  color: #ffffff;
+  font-family: "Six Caps", sans-serif;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  z-index: 20;
+}
+
+nav {
+  position: fixed;
+  background-color: #000000;
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  padding-top: 0.5rem;
+  z-index: 999;
+}
+nav img.Logo {
+  margin-left: 1rem;
+  width: 12rem;
+}
+
+input.toggle-menu {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    top: 2.8rem;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    padding: 0;
+    text-align: center;
+    z-index: 999;
+  }
+  .menu li p {
+    margin: 2rem 0;
+    font-family: "Six Caps", sans-serif;
+    font-style: normal;
+    font-size: 42px;
+    line-height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+  }
+  .menu li p .menu li p:hover {
+    border-bottom: 1px solid #ffffff;
+  }
+  .menu-icon {
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .menu-icon .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    margin: 4px 0;
+    background-color: white;
+  }
+  .menu-checkbox {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  .menu-checkbox:checked ~ .menu-icon .icon-bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu-checkbox:checked ~ .menu-icon .icon-bar:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-checkbox:checked ~ .menu-icon .icon-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .menu.menu-open {
+    position: fixed;
+    display: block !important;
+    padding: 0px;
+    height: 100%;
+  }
+  .menu.menu-open .SOCIAL-NETWORKS {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 3rem;
+    padding: 2rem;
+  }
+  .menu.menu-open .SOCIAL-NETWORKS svg {
+    margin: 0px;
+    width: 3rem;
+    height: 3rem;
+  }
+}
+.hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  margin-top: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(73.41% 73.41% at 96.91% 3.29%, rgba(255, 0, 0, 0.2) 0%, rgba(255, 0, 0, 0.2) 49.14%, rgba(0, 0, 0, 0.2) 100%), linear-gradient(218.25deg, rgba(0, 0, 0, 0.72) 22.04%, rgba(149, 1, 1, 0.72) 54.33%, rgba(0, 0, 0, 0.72) 86.12%);
+}
+.hero img {
+  padding: 0%;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: transparent;
+  right: 0;
+}
+.hero h1 {
+  width: 220px;
+  margin-left: 5%;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 63px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.hero p {
+  width: 240px;
+  margin-left: 5%;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 34px;
+  display: flex;
+  align-items: center;
+}
+
+.music {
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-bottom: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Six Caps", sans-serif;
+  text-align: center;
+  font-size: 26px;
+  letter-spacing: 0.06em;
+}
+.music .player-container {
+  width: 100%;
+  height: 10rem;
+  position: relative;
+  margin-bottom: 1rem;
+  background-image: url("/assets/opus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.music .player-container .frame-container {
+  margin-top: 0.6rem;
+  width: 100%;
+  background-color: transparent;
+}
+.music .player-container .frame-container iframe {
+  display: block;
+  margin: auto;
+  z-index: 1;
+}
+.music .see-more-btn {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  border: 0px;
+  width: 97px;
+  height: 28px;
+  background: linear-gradient(180deg, #950101 0%, rgba(149, 1, 1, 0) 100%);
+  border-radius: 25.5px;
+}
+.music .see-more-btn a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.post {
+  opacity: 90%;
+  width: 100%;
+  height: auto;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: conic-gradient(from 186.22deg at 52.26% 47.49%, #3D0000 -2.2deg, #000000 61.39deg, #3D0000 90.26deg, #000000 109.73deg, #3D0000 173.19deg, #000000 250.9deg, #950101 269.08deg, #000000 297.52deg, #3D0000 357.8deg, #000000 421.39deg);
+  border-radius: 26px;
+  z-index: 3;
+}
+
+.iframeYT {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  width: 90%;
+}
+.iframeYT iframe {
+  border-radius: 16px;
+}
+
+.post-ig {
+  display: flex;
+  justify-content: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 16px;
+  background-image: url("/assets/iphone-5s-mockup.svg");
+  margin: 0.5rem;
+  align-self: center;
+  align-items: center;
+  flex-direction: column;
+  width: 10rem;
+  height: 25rem;
+  border-radius: 16px;
+  position: relative;
+  z-index: 3;
+}
+.post-ig .post-ig-container {
+  display: flex;
+  justify-content: center;
+  width: 120%;
+  height: 89%;
+  margin-bottom: 0.8rem;
+}
+.post-ig .post-ig-content {
+  border-radius: 16px;
+  width: 88%;
+  height: 100%;
+  z-index: 2;
+}
+
+.shows {
+  width: 100%;
+  height: 32rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.shows h2.shows-title {
+  font-family: "Six Caps";
+  justify-content: center;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 84px;
+  display: flex;
+  margin: 2rem;
+  letter-spacing: 0.06em;
+}
+.shows .shows-box {
+  align-items: center;
+  width: auto;
+  height: 20rem;
+  margin: 1rem;
+  border-radius: 20px;
+  background-image: url("/assets/image 11.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.shows .shows-box a {
+  text-decoration: none;
+}
+.shows .shows-box .fecha-show {
+  margin: 1rem;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 42px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+.shows .shows-box h3 {
+  margin: 1rem;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 84px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+.shows .shows-box .show-info {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 34px;
+  display: flex;
+  align-items: center;
+}
+.shows .shows-box .get-ticket {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  width: 6rem;
+  border: 0px;
+  height: 2rem;
+  background: linear-gradient(180deg, #950101 0%, rgba(149, 1, 1, 0) 100%);
+  border-radius: 25.5px;
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  width: 100%;
+  height: auto;
+}
+.contact label {
+  color: #FFFFFF;
+  font-family: "Six Caps", sans-serif;
+}
+.contact h2 {
+  text-align: center;
+  font-family: "Six Caps", sans-serif;
+  font-size: 40px;
+  letter-spacing: 0.1em;
+}
+.contact .form-contact {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.contact .form-div,
+.contact .message {
+  align-self: center;
+  width: 60%;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1rem;
+}
+.contact .form-div span,
+.contact .message span {
+  color: #ff0000;
+}
+.contact .form-div #tipo-usuario,
+.contact .form-div input,
+.contact .message #tipo-usuario,
+.contact .message input {
+  height: 2.5rem;
+  border-radius: 5px;
+  margin: 0px 12px;
+}
+.contact .form-div #tipo-usuario::-moz-placeholder, .contact .form-div input::-moz-placeholder, .contact .message #tipo-usuario::-moz-placeholder, .contact .message input::-moz-placeholder {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.06em;
+  color: rgba(149, 1, 1, 0.63);
+}
+.contact .form-div #tipo-usuario::placeholder,
+.contact .form-div input::placeholder,
+.contact .message #tipo-usuario::placeholder,
+.contact .message input::placeholder {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.06em;
+  color: rgba(149, 1, 1, 0.63);
+}
+.contact .submit-contact {
+  margin: auto;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  border: 0px;
+  height: 2rem;
+  background: linear-gradient(180deg, #950101 0%, rgba(149, 1, 1, 0) 100%);
+  border-radius: 25.5px;
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+footer {
+  padding-top: 2rem;
+  background: radial-gradient(88.31% 88.31% at 50.13% 44.2%, #3D0000 0%, rgba(0, 0, 0, 0.921875) 55.73%, #000000 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer h2 {
+  font-family: "Six Caps", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  color: #FFFFFF;
+  border-bottom: 1px solid #ffffff;
+}
+footer .SOCIAL-NETWORKS {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 3rem;
+}
+footer .SOCIAL-NETWORKS svg {
+  margin: 0px 1rem;
+  width: 3rem;
+  height: 3rem;
+}
+footer img {
+  height: 10rem;
+  width: 10rem;
+}
+
+@media screen and (min-width: 769px) {
+  nav {
+    padding: 0px;
+    justify-content: space-around;
+  }
+  nav .Logo {
+    margin-top: 0.5rem;
+  }
+  .menu {
+    margin: 0px;
+    padding: 0px;
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .menu div {
+    width: 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 0.2rem;
+  }
+  .menu div .facebook {
+    margin-bottom: 0.2rem;
+  }
+  .menu li, .menu .SOCIAL-NETWORKS {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+  }
+  .menu li svg, .menu .SOCIAL-NETWORKS svg {
+    height: 32px;
+    width: 100%;
+    padding-left: 0.2rem;
+  }
+  .menu .menu li p:hover {
+    border-bottom: 1px solid #ffffff;
+  }
+  .hero {
+    height: 28rem;
+  }
+  .hero h1 {
+    padding-left: 4rem;
+    font-size: 52px;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    letter-spacing: 0.2rem;
+  }
+  .hero p {
+    padding-left: 4rem;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+  }
+  .music {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-bottom: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Six Caps", sans-serif;
+    text-align: center;
+    font-size: 26px;
+    letter-spacing: 0.06em;
+  }
+  .music .player-container {
+    width: 100%;
+    height: 20rem;
+    position: relative;
+    margin-bottom: 1rem;
+    background-image: url("/assets/opus.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  .music .player-container .frame-container {
+    margin-top: 0.6rem;
+    width: 100%;
+    background-color: transparent;
+  }
+  .music .player-container .frame-container iframe {
+    display: block;
+    margin: auto;
+    z-index: 1;
+    height: 18rem;
+    width: 34rem;
+  }
+  .music .see-more-btn {
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    border: 0px;
+    width: 97px;
+    height: 36px;
+    background: linear-gradient(180deg, #950101 0%, rgba(149, 1, 1, 0) 100%);
+    border-radius: 25.5px;
+  }
+  .music .see-more-btn a {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  .post {
+    opacity: 90%;
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: conic-gradient(from 186.22deg at 52.26% 47.49%, #3D0000 -2.2deg, #000000 61.39deg, #3D0000 90.26deg, #000000 109.73deg, #3D0000 173.19deg, #000000 250.9deg, #950101 269.08deg, #000000 297.52deg, #3D0000 357.8deg, #000000 421.39deg);
+    border-radius: 26px;
+    z-index: 3;
+  }
+  .iframeYT {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    width: 90%;
+  }
+  .iframeYT iframe {
+    border-radius: 16px;
+    width: 80%;
+    height: 24rem;
+  }
+  .post-ig {
+    display: flex;
+    justify-content: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 0px;
+    padding: 2rem;
+    background-image: url("/assets/iphone-5s-mockup.svg");
+    margin: 0.5rem;
+    align-self: center;
+    align-items: center;
+    flex-direction: column;
+    width: 20rem;
+    height: 44rem;
+    border-radius: 16px;
+    position: relative;
+    z-index: 3;
+  }
+  .post-ig .post-ig-container {
+    display: flex;
+    justify-content: center;
+    width: 120%;
+    height: 110%;
+    margin-bottom: 0.8rem;
+    z-index: 2;
+  }
+  .post-ig .post-ig-content {
+    width: 88%;
+    height: 44rem;
+    margin-bottom: 0.5rem;
+    border-radius: 40px;
+  }
+  .shows {
+    width: 100%;
+    height: 32rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+  .shows h2.shows-title {
+    font-family: "Six Caps";
+    justify-content: center;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 84px;
+    display: flex;
+    margin: 2rem;
+    letter-spacing: 0.06em;
+  }
+  .shows .shows-box {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 65%;
+    height: 20rem;
+    margin: 1rem;
+    border-radius: 20px;
+    background-image: url("/assets/image 11.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .shows .shows-box a {
+    text-decoration: none;
+  }
+  .shows .shows-box .fecha-show {
+    margin: 1rem;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 42px;
+    display: flex;
+    align-content: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+  }
+  .shows .shows-box h3 {
+    margin: 1rem;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 84px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+  }
+  .shows .shows-box .show-info {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+  }
+  .shows .shows-box .get-ticket {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    width: 6rem;
+    border: 0px;
+    height: 2rem;
+    background: linear-gradient(180deg, #950101 0%, rgba(149, 1, 1, 0) 100%);
+    border-radius: 25.5px;
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    width: 100%;
+    height: auto;
+  }
+  .contact label {
+    color: #FFFFFF;
+    font-family: "Six Caps", sans-serif;
+    font-size: xx-large;
+  }
+  .contact h2 {
+    text-align: center;
+    font-family: "Six Caps", sans-serif;
+    font-size: 50px;
+    letter-spacing: 0.1em;
+  }
+  .contact .form-contact {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .contact .form-div,
+  .contact .message {
+    align-self: center;
+    width: 35%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.1rem;
+  }
+  .contact .form-div span,
+  .contact .message span {
+    position: relative;
+    left: -2rem;
+    color: #ff0000;
+  }
+  .contact .form-div #tipo-usuario,
+  .contact .form-div input,
+  .contact .message #tipo-usuario,
+  .contact .message input {
+    width: 40%;
+    height: 2.5rem;
+    border-radius: 5px;
+    margin: 0px 12px;
+  }
+  .contact .form-div #tipo-usuario::-moz-placeholder, .contact .form-div input::-moz-placeholder, .contact .message #tipo-usuario::-moz-placeholder, .contact .message input::-moz-placeholder {
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.06em;
+    color: rgba(149, 1, 1, 0.63);
+  }
+  .contact .form-div #tipo-usuario::placeholder,
+  .contact .form-div input::placeholder,
+  .contact .message #tipo-usuario::placeholder,
+  .contact .message input::placeholder {
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.06em;
+    color: rgba(149, 1, 1, 0.63);
+  }
+  .contact .submit-contact {
+    margin: auto;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    border: 0px;
+    height: 2rem;
+    background: linear-gradient(180deg, #950101 0%, rgba(149, 1, 1, 0) 100%);
+    border-radius: 25.5px;
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+  }
+  footer img {
+    height: 12rem;
+    width: 12rem;
+  }
+}/*# sourceMappingURL=main.css.map */
